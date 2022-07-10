@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
-@font-face {
-  font-family: "Social Gothic";
-  src: url("../../f1/SocialGothic-Demibold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
 .container {
   margin: 0 auto;
   max-width: 1170px;
@@ -17,7 +11,7 @@
 }
 @media (max-width: 990px) {
   .container {
-    max-width: 95%;
+    max-width: 93%;
   }
 }
 .btn {
@@ -246,9 +240,15 @@
   background-size: cover;
   padding: 120px 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .promo {
-    height: 100vh;
+    height: 300px;
+    padding: 80px 10px 40px 10px;
+  }
+}
+@media (max-width: 739px) {
+  .promo {
+    height: auto;
   }
 }
 .promo__container {
@@ -305,11 +305,6 @@
 }
 
 @media (max-width: 992px) {
-  .promo {
-    height: 300px;
-    padding: 70px 10px;
-  }
-
   .promo__content {
     text-align: center;
     position: static;
@@ -347,11 +342,6 @@
 
   .promo__subtitle {
     font-size: 15px;
-  }
-}
-@media (max-width: 739px) {
-  .promo {
-    height: 400px;
   }
 }
 .header {

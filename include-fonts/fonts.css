@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Social Gothic';
+    src: 
+        url('./../fonts/SocialGothic-Demibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Social Gothic';
+    src: local('Social Gothic Demibold'), local('Social-Gothic-Demibold'),
+        url('./../fonts/SocialGothic-Demibold.woff2') format('woff2'),
+        url('./../fonts/SocialGothic-Demibold.woff') format('woff'),
+        url('./../fonts/SocialGothic-Demibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
