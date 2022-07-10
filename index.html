@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./include-fonts/base.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="./stylesheets/main.css" />
+    <link rel="shortcut icon" href="./imgs/wb-icon.webp" type="image/x-icon" />
+    <title>Wildberries</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="modal">
+      <div class="modal__wrap">
+        <div class="modal__title">Записаться на вебинар</div>
+        <img class="close" src="./imgs/close.png" height="40px" alt="закрыть" />
+        <form class="modal__form" action="./sender.php" method="post">
+          <label for="">ФИО</label>
+          <input type="text" name="name" />
+
+          <label for="">Номер</label>
+          <input type="text" name="number" />
+
+          <label for="">Почта</label>
+          <input type="text" name="email" />
+
+          <label for="">Знакомы ли вы с интернет площадками?</label>
+          <input type="text" name="answer1" />
+
+          <label for=""
+            >Какой размер дохода был на прошлом или текущем месте работы</label
+          >
+          <input type="text" name="answer2" />
+
+          <label for=""
+            >Рассматриваете для себя торговлю на вб как постоянный заработок или
+            как дополнительный доход</label>
+          <input type="text" name="answer3" />
+
+          <input class="submit-btn" type="submit" value="Отправить" />
+        </form>
+      </div>
+    </div>
+    <header
+      class="header"
+      style="position: absolute; width: 100%; z-index: 999999999"
+    >
+      <div class="container header__container">
+        <div>
+          <span style="margin-top: 10px">WildberriesLogo</span>
+        </div>
+      </div>
+    </header>
+    <section class="promo" style='background: url("./imgs/promo/main-bg.webp")'>
+      <div class="container promo__container">
+        <div class="promo__content">
+          <div class="promo__title">
+            КАК УДАЛЁННО ЗАПУСТИТЬ
+            <span>СОБСТВЕННЫЙ МАГАЗИН НА WILDBERRIES</span> И ВЫЙТИ С НУЛЯ НА
+            ДОХОД ОТ <span>100.000Р ЗА 2 МЕСЯЦА</span>
+          </div>
+          <p class="promo__subtitle">
+            Пошаговый план запуска и разбор всех подводных камней!
+          </p>
+          <a class="promo__btn btn btn-modal" href="">
+            ЗАРЕГИСТРИРОВАТЬСЯ НА ВЕБИНАР
+          </a>
+        </div>
+        <img
+          class="promo__main-img"
+          src="./imgs/promo/blick.png"
+          height="600px"
+          width="600px"
+          alt="блик"
+          loading="lazy"
+        />
+        <img class="promo__main-img" src="./imgs/promo/wb-car.webp" alt="вб-машина" />
+        <img class="promo__bg-img" src="./imgs/promo/rocket.webp" alt="ракета" />
+      </div>
+    </section>
+    <section class="benefit">
+      <div class="container">
+        <h2 class="title">КОМУ БУДЕТ ПОЛЕЗЕН <span>ВЕБИНАР ?</span></h2>
+        <div class="benefit__items">
+          <div class="benefit__item">
+            <div class="benefit__item-title">НУЛЯМ</div>
+            <p class="benefit__item-subtitle">
+              Освоите новый способ заработка и сможете совмещать его с основной
+              работой!
+            </p>
+          </div>
+          <div class="benefit__item">
+            <div class="benefit__item-title">НОВИЧКАМ</div>
+            <p class="benefit__item-subtitle">
+              Узнаете, как начать торговлю на WILDBERRIES без вложений
+            </p>
+          </div>
+          <div class="benefit__item">
+            <div class="benefit__item-title">ОПЫТНЫМ</div>
+            <p class="benefit__item-subtitle">
+              Перестанете бояться подводных камней и узнаете все о сертификации,
+              товарных знаках и других нюансах!
+            </p>
+          </div>
+        </div>
+        <div class="flex-wrap">
+          <a class="benefit__btn btn btn-modal" href="">
+            ЗАРЕГИСТРИРОВАТЬСЯ НА ВЕБИНАР
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="organizers">
+      <div class="container">
+        <h2 class="title">КТО ВЕДЁТ ВЕБИНАР?</h2>
+        <div class="organizers__wrapper">
+          <div class="organizers__item item--first">
+            <div class="organizers__name-title">Имя <br> Фамилия</div>
+            <ul class="organizers__skills-list">
+              <li class="organizers__skill">- Основател компании</li>
+              <li class="organizers__skill">- На рынке с 2018 года</li>
+            </ul>
+          </div>
+          <div class="organizers__item item--second">
+            <div class="organizers__name-title">Имя <br> Фамилия</div>
+            <ul class="organizers__skills-list">
+              <li class="organizers__skill">Спикер компании -</li>
+              <li class="organizers__skill">Креативщик уровня "ВАУ" -</li>
+            </ul>
+          </div>
+          <div class="organizers__img-wrapper">
+            <img class="organizers__icon" src="./imgs/organizers/wbic.png" alt="вб-иконка" />
+            
+          </div>
+        </div>
+        <div class="organizers__subtitle">ДО ВСТРЕЧИ НА ВЕБИНАРЕ,</div>
+        <p class="organizers__paragraph">
+          где вы узнаете,
+          <span>как с нуля стать владельцем магазина с шестизначной прибылью!</span>
+        </p>
+        <p class="organizers__info">Стоимость знаний:</p>
+        <p class="organizers__price">БЕСПЛАТНО</p>
+        <div class="flex-wrap">
+          <a class="benefit__btn btn btn-modal" href=""> ПРИНЯТЬ УЧАСТИЕ </a>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <div class="container">
+        <h2 class="title">ЧТО <span>ВЫ</span> ПОЛУЧИТЕ</h2>
+        <div class="info__items">
+          <div class="info__item">
+            <div class="info__item-title">1 волокита на нас</div>
+            <p class="info__item-subtitle">
+              Мы берем на себя всю бумажную волокиту: <br />
+              <br />
+              1: Открытие ИП <br />
+              2: Подача документов в налогувую <br />
+              3: Подскажем какой банк лучше выбрать и откроем вам расчетный счет
+              <br />
+              Все переговоры с банками ложатся на нас, от вас потребуется только
+              ваше желание. <br />
+            </p>
+          </div>
+          <div class="info__item">
+            <div class="info__item-title">2 мы научим</div>
+            <p class="info__item-subtitle">
+              - Мы расскажем и обучим вас всему что понадобится вам для начала
+              работы <br />
+              - Вы своими глазами увидите как проходит регистрация <br />
+              - Выберем несколько ниш и посчитаем на калькуляторе свой заработок
+              <br />
+              - Оформлять карточки товаров и оптимизировать их для продвижения
+              <br />
+              - Готовить товары к поставкам на Wildberries и работать по схемам
+              FBO и FBS <br />
+              - Решать проблемные ситуации с онлайн-площадкой <br />
+              <br />
+              Пройдем вместе с вами все этапы до первой продажи!
+            </p>
+          </div>
+          <div class="info__item">
+            <div class="info__item-title">3 Ежедневные выплаты</div>
+            <p class="info__item-subtitle">
+              Работая с нами, вы сможете получать выплаты с Вайлдбериз не
+              еженедельно как получают все предприниматели которые работают на
+              данной площадке. <br />
+              <br />
+              Вы сможете получать ЕЖЕДНЕВНЫЕ выплаты обучаясь у нас. <br />
+              Мы поддержим ваше начинание нашими специалистами: Дизайнеры,
+              Креатив менеджеры, копирайтеры, CEO-специалисты. <br />
+            </p>
+          </div>
+          <div class="info__item">
+            <div class="info__item-title">4 начнем :)</div>
+            <p class="info__item-subtitle">
+              Для выполнения практических работ на курсе вам потребуется
+              зарегистрироваться на портале поставщиков Wildberries. <br />
+              Это возможно, если вы: <br />
+              живёте в России, Беларуси, Казахстане или Киргизии; <br />
+              имеете статус ИП, юрлица, самозанятого* или работаете в компании,
+              готовой предоставить вам доступ на маркетплейс. Все это мы
+              предоставим вам!
+            </p>
+          </div>
+        </div>
+        <div class="flex-wrap">
+          <a class="benefit__btn btn btn-modal" href="">
+            ЗАРЕГИСТРИРОВАТЬСЯ НА ВЕБИНАР
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__self-data-wrapper">
+          <p>mail@internet.ru</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

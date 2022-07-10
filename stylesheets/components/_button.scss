@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+.btn {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #c710c7;
+    box-shadow: 0px 8px 30px 0px $main-color--light;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    z-index: 22;
+    transition: 0.3s;
+    text-align: center;
+    &:hover {
+      background-color: $main-color--light;
+      transform: scaleX(1.005);
+    }
+  }

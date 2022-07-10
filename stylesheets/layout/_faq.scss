@@ -1,0 +1,89 @@
+@use '../abstracts/' as *;
+@use '../base/fonts' as *;
+
+.faq {
+    background: linear-gradient(
+      180deg,
+      rgba(29, 27, 43, 1) 0%,
+      rgba(24, 23, 34, 1) 100%
+    );
+    padding: 120px 0;
+    &__question-items {
+      margin-top: 50px;
+    }
+    &__question-item {
+      margin-top: 30px;
+      @media (max-width: map-get($container-max-widths, md)) {
+        margin-top: 20px
+      }
+      @media (max-width: map-get($container-max-widths, sm)) {
+        margin-top: 10px
+      }
+      
+    }
+    &__question {
+      font-family: "Social Gothic";
+      color: #a52ca5;
+      font-size: 35px;
+      @media (max-width: map-get($container-max-widths, md)) {
+        font-size: 25px;
+      }
+      @media (max-width: map-get($container-max-widths, sm)) {
+        font-size: 18px;
+      }
+      
+    }
+    &__more-btn {
+      enable-background:new 0 0 512 512;
+      margin-bottom: 1px;
+      margin-right: 10px;
+      transform: rotate(45deg);
+      @media (max-width: map-get($container-max-widths, md)) {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+      @media (max-width: map-get($container-max-widths, sm)) {
+        width: 15px;
+        height: 15px;
+        margin-right: 2px;
+      }
+      
+    }
+    &__answer {
+      font-family: "Reforma Grotesk Demi";
+      color: white;
+      line-height:28px;
+      letter-spacing: 0.4px;
+      font-size: 25px;
+      padding-left: 48px;
+      margin-top: 10px;
+      
+      @media (max-width: map-get($container-max-widths, md)) {
+        padding-left: 10px;
+        font-size: 20px;
+        line-height:22px;
+      }
+      @media (max-width: map-get($container-max-widths, sm)) {
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 16px;
+      }
+    }
+  }
+   
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  
+  details[open] .faq__question{
+    border-bottom: 2px solid $main-color;
+  }
+  
+  details[open] .faq__more-btn {
+    enable-background:new 0 0 512 512;
+    margin-bottom: 1px;
+    margin-right: 10px;
+    transform: rotate(0deg);
+  }

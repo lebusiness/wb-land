@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+.title {
+    font-family: "Social Gothic";
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    span {
+      color: $main-color--light;
+    }
+    @media (max-width: 500px) {
+      font-size: 35px;
+    }
+  }

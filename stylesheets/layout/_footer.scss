@@ -1,0 +1,18 @@
+@use '../abstracts/' as *;
+@use '../base/fonts' as *;
+
+.footer {
+    padding: 10px;
+    background: #171321;
+    display: flex;
+    justify-items: center;
+    &__self-data-wrapper {
+      display: flex;
+      gap: 30px;
+      color: #ff8562;
+      font-family: "Yanone Kaffeesatz";
+      p {
+        margin: auto 0;
+      }
+    }
+  }

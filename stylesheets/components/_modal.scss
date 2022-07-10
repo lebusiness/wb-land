@@ -1,0 +1,104 @@
+@use '../abstracts/' as *;
+@use '../base/fonts' as *;
+.overlay {
+    opacity: 0;
+    transition: 0.3s;
+    visibility: hidden;
+    position: fixed;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    z-index: 9999999;
+  }
+  .modal {
+    opacity: 0;
+    transition: 0.3s;
+    position: relative;
+    visibility: hidden;
+    border: 1px solid #a52ca5;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
+    width: 500px;
+    position: fixed;
+    background: rgba(75, 3, 67, 0.2); // Make sure this color has an opacity of less than 1
+    backdrop-filter: blur(50px); // This be the blur
+    color: white;
+    &__title {
+      color: $main-color;
+      font-family: "Social Gothic";
+      font-size: 60px;
+      @media (max-width: 520px) {
+        font-size: 30px;
+      }
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      height: 50vh;
+      overflow: scroll;
+      padding-right: 15px;
+      label {
+        color: $main-color--light;
+        font-family: "Reforma Grotesk Demi";
+        margin-top: 10px;
+        margin-bottom: 3px;
+        letter-spacing: 0.8px;
+        font-size: 20px;
+        @media (max-width: 520px) {
+          font-size: 15px;
+          letter-spacing: 0.2px;
+        }
+      }
+      input {
+        background: none;
+        border: none;
+        background: rgb(245, 212, 245);
+        border-radius: 5px;
+        padding: 10px;
+        border-bottom: 1px solid rgb(250, 230, 255);
+        &:focus {outline: 0; outline-offset: 0;};
+        font-size: 30px;
+        font-family: "Reforma Grotesk Demi";
+        color: #910091;
+        @media (max-width: 520px) {
+          padding: 5px;
+          font-size: 20px;
+        }
+      }
+    }
+    @media (max-width: 520px) {
+      width: 95%;
+    }
+    &__wrap {
+      position: relative;
+      padding: 40px;
+      @media (max-width: 520px) {
+        padding: 20px;
+      }
+    }
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+    .submit-btn {
+      transition: 0.1s;
+      margin-top: 15px;
+      background: none;
+      border: 2px solid #910091;
+      cursor: pointer;
+      &:hover {
+        background-color: #910091;
+        color: white
+      }
+    }
+  }
+  //////////
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }

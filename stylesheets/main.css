@@ -1,0 +1,744 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "Social Gothic";
+  src: url("../../f1/SocialGothic-Demibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media (max-width: 1290px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 990px) {
+  .container {
+    max-width: 95%;
+  }
+}
+.btn {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #c710c7;
+  box-shadow: 0px 8px 30px 0px #de2294;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  z-index: 22;
+  transition: 0.3s;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #de2294;
+  transform: scaleX(1.005);
+}
+
+.title {
+  font-family: "Social Gothic";
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+.title span {
+  color: #de2294;
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 35px;
+  }
+}
+
+.overlay {
+  opacity: 0;
+  transition: 0.3s;
+  visibility: hidden;
+  position: fixed;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  z-index: 9999999;
+}
+
+.modal {
+  opacity: 0;
+  transition: 0.3s;
+  position: relative;
+  visibility: hidden;
+  border: 1px solid #a52ca5;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999;
+  width: 500px;
+  position: fixed;
+  background: rgba(75, 3, 67, 0.2);
+  backdrop-filter: blur(50px);
+  color: white;
+}
+.modal__title {
+  color: #a52ca5;
+  font-family: "Social Gothic";
+  font-size: 60px;
+}
+@media (max-width: 520px) {
+  .modal__title {
+    font-size: 30px;
+  }
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  overflow: scroll;
+  padding-right: 15px;
+}
+.modal__form label {
+  color: #de2294;
+  font-family: "Reforma Grotesk Demi";
+  margin-top: 10px;
+  margin-bottom: 3px;
+  letter-spacing: 0.8px;
+  font-size: 20px;
+}
+@media (max-width: 520px) {
+  .modal__form label {
+    font-size: 15px;
+    letter-spacing: 0.2px;
+  }
+}
+.modal__form input {
+  background: none;
+  border: none;
+  background: rgb(245, 212, 245);
+  border-radius: 5px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(250, 230, 255);
+  font-size: 30px;
+  font-family: "Reforma Grotesk Demi";
+  color: #910091;
+}
+.modal__form input:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+@media (max-width: 520px) {
+  .modal__form input {
+    padding: 5px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .modal {
+    width: 95%;
+  }
+}
+.modal__wrap {
+  position: relative;
+  padding: 40px;
+}
+@media (max-width: 520px) {
+  .modal__wrap {
+    padding: 20px;
+  }
+}
+.modal .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.modal .submit-btn {
+  transition: 0.1s;
+  margin-top: 15px;
+  background: none;
+  border: 2px solid #910091;
+  cursor: pointer;
+}
+.modal .submit-btn:hover {
+  background-color: #910091;
+  color: white;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes inimate__one-3 {
+  0% {
+    transform: skewY(1deg);
+  }
+  100% {
+    transform: skewY(-1deg);
+  }
+}
+@keyframes inimate__one {
+  0% {
+    transform: skewY(0deg);
+  }
+  50% {
+    transform: skewY(30deg);
+  }
+  75% {
+    transform: skewY(-20deg);
+  }
+  100% {
+    transform: skewY(0deg);
+  }
+}
+@keyframes inimate__one-1 {
+  0% {
+    transform: skewY(0deg);
+  }
+  50% {
+    transform: skewY(-20deg);
+  }
+  75% {
+    transform: skewY(30deg);
+  }
+  100% {
+    transform: skewY(0deg);
+  }
+}
+@keyframes inimate__two {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+@keyframes inimate__shadow {
+  0% {
+    box-shadow: 0px 1px 5px 0px rgba(222, 34, 148, 0.2);
+  }
+  100% {
+    box-shadow: 0px 5px 6px 0px rgba(222, 34, 148, 0.8);
+  }
+}
+@keyframes inimate__shadow1 {
+  0% {
+    box-shadow: 0px 0px 40px 16px rgba(249, 9, 221, 0.25);
+  }
+  50% {
+    box-shadow: 0px 0px 80px 16px rgba(249, 9, 221, 0.5);
+  }
+  100% {
+    box-shadow: 0px 0px 40px 16px rgba(249, 9, 221, 0.25);
+  }
+}
+.promo {
+  overflow: hidden;
+  height: 600px;
+  background-size: cover;
+  padding: 120px 0;
+}
+@media (max-width: 768px) {
+  .promo {
+    height: 100vh;
+  }
+}
+.promo__container {
+  position: relative;
+}
+.promo__content {
+  z-index: 1;
+  position: absolute;
+}
+.promo__title {
+  width: 600px;
+  font-family: "Social Gothic";
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 41px;
+}
+.promo__title span {
+  color: #de2294;
+}
+.promo__subtitle {
+  margin: 0;
+  transform: rotate(-2deg);
+  width: 320px;
+  margin-top: 100px;
+  margin-bottom: 0;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+  animation: inimate__one-3 2s infinite;
+  animation-direction: alternate;
+}
+.promo__btn {
+  margin-top: 15px;
+  padding: 17px 30px 13px 30px;
+}
+.promo__main-img {
+  position: absolute;
+  right: 0px;
+  height: 450px;
+}
+.promo__bg-img {
+  position: absolute;
+  top: -290px;
+  left: -200px;
+  height: 1000px;
+  z-index: 0;
+  opacity: 0.09;
+}
+
+@media (max-width: 992px) {
+  .promo {
+    height: 300px;
+    padding: 70px 10px;
+  }
+
+  .promo__content {
+    text-align: center;
+    position: static;
+  }
+
+  .promo__main-img {
+    display: none;
+  }
+
+  .promo__bg-img {
+    display: none;
+  }
+
+  .promo__title {
+    width: auto;
+    font-size: 25px;
+  }
+
+  .promo__subtitle {
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .btn {
+    padding: 17px 30px 13px 30px;
+    font-size: 20px;
+    align-items: center;
+  }
+}
+@media (max-width: 390px) {
+  .promo__title {
+    width: auto;
+    font-size: 20px;
+  }
+
+  .promo__subtitle {
+    font-size: 15px;
+  }
+}
+@media (max-width: 739px) {
+  .promo {
+    height: 400px;
+  }
+}
+.header {
+  padding: 20px 0;
+  width: 100%;
+}
+.header__container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  justify-content: flex-end;
+}
+.header span {
+  display: inline-block;
+  font-size: 33px;
+  font-family: "Social Gothic";
+  color: white;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .header span {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .header span {
+    font-size: 25px;
+  }
+}
+.header a {
+  cursor: pointer;
+  font-size: 22px !important;
+  padding: 12px 20px 6px 20px;
+  box-shadow: 0px 5px 8px 0px rgba(222, 34, 148, 0.4) !important;
+  letter-spacing: 1px;
+}
+@media (max-width: 992px) {
+  .header a {
+    font-size: 15px !important;
+    padding: 13px 15px 10px 15px;
+  }
+}
+@media (max-width: 768px) {
+  .header a {
+    padding: 12px 15px 10px 15px;
+  }
+}
+@media (max-width: 992px) {
+  .header {
+    padding: 10px 0;
+  }
+}
+
+.benefit {
+  background: linear-gradient(180deg, rgb(29, 27, 43) 0%, rgb(24, 23, 34) 100%);
+  padding: 40px 0;
+}
+.benefit__items {
+  display: flex;
+  gap: 20px;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .benefit__items {
+    flex-direction: column;
+  }
+}
+.benefit__item {
+  border: 1px solid #a52ca5;
+  border-radius: 5px;
+  padding: 45px 40px;
+  flex: 1;
+  animation: inimate__shadow 1s ease-in-out infinite;
+  animation-direction: alternate;
+  background: url("./../imgs/benefit/rocket2.webp");
+  background-size: cover;
+  transition: 0.2s;
+}
+.benefit__item:hover {
+  box-shadow: 0px 5px 6px 0px #de2294 !important;
+  transform: translateY(5px);
+}
+.benefit__item-title {
+  color: #a52ca5;
+  font-family: "Social Gothic";
+  font-size: 35px;
+}
+@media (max-width: 576px) {
+  .benefit__item-title {
+    font-size: 30px;
+  }
+}
+.benefit__item-subtitle {
+  margin-top: 15px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.benefit__btn {
+  margin-top: 50px;
+  padding: 17px 30px 13px 30px;
+}
+
+.organizers {
+  padding: 40px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./../imgs/promo/main-bg.webp");
+  background-size: cover;
+}
+.organizers__wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+.organizers__item {
+  flex: 0.7;
+}
+.organizers .item--first {
+  text-align: left;
+}
+.organizers .item--second {
+  text-align: right;
+}
+.organizers__img-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.organizers__blick {
+  opacity: 0.6;
+  position: absolute;
+  z-index: 1;
+  width: 380px;
+  top: -85px;
+}
+.organizers .blick--first {
+  animation: inimate__one 2s infinite;
+}
+.organizers .blick--second {
+  animation: inimate__one-1 2s infinite;
+}
+.organizers__icon {
+  animation-direction: alternate;
+  top: 35px;
+  height: 130px;
+  border-radius: 20px;
+  z-index: 9;
+  margin-right: 60px;
+  animation: inimate__shadow1 2.5s ease-in-out infinite;
+}
+.organizers__name-title {
+  font-family: "Social Gothic";
+  font-size: 50px;
+  color: #de2294;
+}
+.organizers__skills-list {
+  margin: 0;
+  padding: 0;
+}
+.organizers__skill {
+  list-style-type: none;
+  margin-top: 10px;
+  color: white;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 20px;
+}
+.organizers__subtitle {
+  margin-top: 80px;
+  color: white;
+  font-family: "Social Gothic";
+  letter-spacing: 1px;
+  font-size: 25px;
+  text-align: right;
+}
+.organizers__paragraph {
+  margin-top: 10px;
+  text-align: right;
+  color: white;
+  font-family: "Social Gothic";
+  font-size: 20px;
+}
+.organizers__paragraph span {
+  color: rgb(222, 34, 148);
+}
+.organizers__info {
+  margin-top: 10px;
+  text-align: right;
+  color: white;
+  font-family: "Social Gothic";
+  font-size: 20px;
+}
+.organizers__price {
+  margin-top: 5px;
+  text-align: right;
+  color: white;
+  font-family: "Yanone Kaffeesatz";
+  font-size: 40px;
+  color: #de2294;
+}
+
+@media (max-width: 992px) {
+  .organizers__wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .organizers__img-wrapper {
+    display: none;
+  }
+}
+.info {
+  background: linear-gradient(180deg, rgb(29, 27, 43) 0%, rgb(24, 23, 34) 100%);
+  padding: 40px 0;
+}
+.info__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+}
+@media (max-width: 992px) {
+  .info__items {
+    grid-template-columns: 1fr;
+  }
+}
+.info__item {
+  border: 1px solid #a52ca5;
+  border-radius: 5px;
+  padding: 45px 40px;
+  flex: 1;
+  animation: inimate__shadow 1s ease-in-out infinite;
+  animation-direction: alternate;
+  background: url("./../imgs/benefit/rocket2.webp");
+  background-size: cover;
+  transition: 0.2s;
+}
+.info__item:hover {
+  box-shadow: 0px 5px 6px 0px rgba(222, 34, 148, 0.8) !important;
+  transform: translateY(2px);
+}
+@media (max-width: 576px) {
+  .info__item {
+    padding: 25px 20px;
+  }
+}
+.info__item-title {
+  color: #a52ca5;
+  font-family: "Social Gothic";
+  font-size: 60px;
+}
+@media (max-width: 576px) {
+  .info__item-title {
+    font-size: 30px;
+  }
+}
+.info__item-subtitle {
+  margin-top: 15px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.info__btn {
+  margin-top: 50px;
+  padding: 17px 30px 13px 30px;
+}
+
+.flex-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  padding: 10px;
+  background: #171321;
+  display: flex;
+  justify-items: center;
+}
+.footer__self-data-wrapper {
+  display: flex;
+  gap: 30px;
+  color: #ff8562;
+  font-family: "Yanone Kaffeesatz";
+}
+.footer__self-data-wrapper p {
+  margin: auto 0;
+}
+
+.faq {
+  background: linear-gradient(180deg, rgb(29, 27, 43) 0%, rgb(24, 23, 34) 100%);
+  padding: 120px 0;
+}
+.faq__question-items {
+  margin-top: 50px;
+}
+.faq__question-item {
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .faq__question-item {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .faq__question-item {
+    margin-top: 10px;
+  }
+}
+.faq__question {
+  font-family: "Social Gothic";
+  color: #a52ca5;
+  font-size: 35px;
+}
+@media (max-width: 768px) {
+  .faq__question {
+    font-size: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .faq__question {
+    font-size: 18px;
+  }
+}
+.faq__more-btn {
+  enable-background: new 0 0 512 512;
+  margin-bottom: 1px;
+  margin-right: 10px;
+  transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+  .faq__more-btn {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .faq__more-btn {
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+  }
+}
+.faq__answer {
+  font-family: "Reforma Grotesk Demi";
+  color: white;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+  font-size: 25px;
+  padding-left: 48px;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .faq__answer {
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .faq__answer {
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 16px;
+  }
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details[open] .faq__question {
+  border-bottom: 2px solid #a52ca5;
+}
+
+details[open] .faq__more-btn {
+  enable-background: new 0 0 512 512;
+  margin-bottom: 1px;
+  margin-right: 10px;
+  transform: rotate(0deg);
+}
+
+/*# sourceMappingURL=main.css.map */
